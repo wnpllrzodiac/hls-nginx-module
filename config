@@ -1,0 +1,13 @@
+ngx_addon_name=ngx_http_hls_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_hls_module"
+
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS \
+                $ngx_addon_dir/src/ngx_http_hls_flv_handler.c \
+                $ngx_addon_dir/src/ngx_http_hls_mp4_handler.c \
+                $ngx_addon_dir/src/ngx_http_hls_module.c"
+
+NGX_ADDON_DEPS="$NGX_ADDON_DEPS  \
+                $ngx_addon_dir/src/ngx_http_hls_module.h"
+
+CORE_INCS="$CORE_INCS $ngx_feature_path"
+
